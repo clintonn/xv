@@ -1,7 +1,13 @@
-import React from 'react'
+import React, { Component } from 'react'
+import Splash from './splash'
 
-export default () => {
-  return (
-    <div>Hello world!</div>
-  )
+export default class Main extends Component {
+  render() {
+    return (
+    <div>
+      { this.props.children }
+      Hello main
+      <Splash />
+    </div>
+  )}
 }
