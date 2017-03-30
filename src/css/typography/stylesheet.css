@@ -1,0 +1,29 @@
+@font-face {
+  font-family: 'Tiempos Headline';
+  src: url("./typography/TiemposHeadline-Regular.woff") format("woff"), url("./typography/TiemposHeadline-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Tiempos Headline';
+  src: url("./typography/TiemposHeadline-Bold.woff") format("woff"), url("./typography/TiemposHeadline-Bold.woff2") format("woff2");
+  font-weight: bold;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Vaud Display';
+  src: url("./typography/VaudDisplay-Medium.woff") format("woff"), url("./typography/VaudDisplay-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Vaud Display';
+  src: url("./typography/VaudDisplay-SemiBold.woff") format("woff"), url("./typography/VaudDisplay-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Vaud Display';
+  src: url("./typography/VaudDisplay-Light.woff2") format("woff2"), url("./typography/VaudDisplay-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal; }

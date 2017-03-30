@@ -1,0 +1,81 @@
+
+<svg width="633px" height="248px" viewBox="403 195 633 248" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <linearGradient x1="50%" y1="73.265814%" x2="50%" y2="142.11032%" id="linearGradient-1">
+            <stop stop-color="#FFFFFF" stop-opacity="0.5" offset="0%"></stop>
+            <stop stop-color="#000000" stop-opacity="0.5" offset="100%"></stop>
+        </linearGradient>
+        <rect id="path-2" x="0" y="0" width="633" height="248"></rect>
+        <linearGradient x1="50%" y1="-123.382812%" x2="50%" y2="61.0524919%" id="linearGradient-4">
+            <stop stop-color="#F1F1F1" stop-opacity="0" offset="0%"></stop>
+            <stop stop-color="#F1F1F1" offset="83.8050064%"></stop>
+            <stop stop-color="#EBEBEB" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Projects———" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(403.000000, 195.000000)">
+        <mask id="mask-3" fill="white">
+            <use xlink:href="#path-2"></use>
+        </mask>
+        <g id="Mask">
+            <use fill="#D8D8D8" xlink:href="#path-2"></use>
+            <use fill="url(#linearGradient-1)" xlink:href="#path-2"></use>
+        </g>
+        <text mask="url(#mask-3)" transform="translate(152.000000, 236.500000) rotate(-90.000000) translate(-152.000000, -236.500000) " font-family="Tiempos Headline" font-size="14" font-weight="normal" letter-spacing="-0.409999996" fill="#2B2B2B">
+            <tspan x="112.5" y="240.5">Projects——</tspan>
+            <tspan x="180.164" y="240.5">—</tspan>
+        </text>
+        <g id="Contact-Information" mask="url(#mask-3)">
+            <g transform="translate(188.000000, 124.000000)">
+                <g id="Contact-Labels" transform="translate(0.000000, 1.164835)" font-size="8" letter-spacing="0.571428597">
+                    <text id="EMAIL" font-family="VaudDisplay-SemiBold, Vaud Display" font-weight="500" fill="#3B4149">
+                        <tspan x="0" y="8">EMAIL</tspan>
+                    </text>
+                    <text id="PHONE" font-family="VaudDisplay-SemiBold, Vaud Display" font-weight="500" fill="#3B4149">
+                        <tspan x="0" y="22.375">PHONE</tspan>
+                    </text>
+                    <text id="SITE" font-family="VaudDisplay-SemiBold, Vaud Display" font-weight="500" fill="#3B4149">
+                        <tspan x="0" y="36.75">SITE</tspan>
+                    </text>
+                    <text id="PORTFOLIO" font-family="Vaud Display" font-weight="bold" fill="#3B4149">
+                        <tspan x="0" y="51.125">PORTFOLIO</tspan>
+                    </text>
+                </g>
+                <g id="Contact-Info" transform="translate(136.640271, 0.000000)" font-size="8" letter-spacing="0.571428597">
+                    <text id="ellen@goulding.me" font-family="VaudDisplay-Book, Vaud Display" font-weight="300" fill="#3B4149">
+                        <tspan x="40.8934424" y="8">ellen@goulding.me</tspan>
+                    </text>
+                    <text id="617-650-2456" font-family="VaudDisplay-Book, Vaud Display" font-weight="300" fill="#3B4149">
+                        <tspan x="60.4625853" y="23.6960852">617-650-2456</tspan>
+                    </text>
+                    <text id="https://egoulding.ar" font-family="VaudDisplay-Book, Vaud Display" font-weight="300" fill="#3B4149">
+                        <tspan x="22.9094422" y="37.7585852">https://egoulding.artist</tspan>
+                    </text>
+                    <text id="https://blog.clinton" font-family="Vaud Display" font-weight="400" fill="#3B4149">
+                        <tspan x="23.8648708" y="52.2898352">https://blog.clinton.so</tspan>
+                    </text>
+                </g>
+                <g id="Contact-Label-Dividers" transform="translate(70.936652, 1.659341)" stroke-linecap="square">
+                    <path d="M0.290723982,0.5625 L73.5554747,0.5625" id="Line" stroke="#D8D8D8" stroke-width="2"></path>
+                    <path d="M0.290723982,52.3125 L73.5554747,52.3125" id="Line-Copy-3" stroke="#D8D8D8" stroke-width="2"></path>
+                    <path d="M0.290723982,17.8125 L73.5554747,17.8125" id="Line-Copy-2" stroke="#D8D8D8" stroke-width="2"></path>
+                    <path d="M0.290723982,35.0625 L73.5554747,35.0625" id="Line-Copy" stroke="#D8D8D8" stroke-width="2"></path>
+                </g>
+            </g>
+        </g>
+        <g id="Blocker" mask="url(#mask-3)">
+            <g transform="translate(182.000000, 164.000000)">
+                <rect id="Rectangle" fill="url(#linearGradient-4)" fill-rule="evenodd" x="0" y="0" width="270" height="19"></rect>
+                <text id="SHOW-MORE-CONTACT-IN" fill="none" font-family="Vaud Display" font-size="7" font-weight="500" letter-spacing="0.5">
+                    <tspan x="93.15" y="14.835" fill="#3B4149">SHOW MORE CONTACT INFO</tspan>
+                </text>
+                <text id="Down-chevron" fill="none" font-family="FontAwesome" font-size="7" font-weight="normal">
+                    <tspan x="74.925" y="14.93" fill="#3B4149"></tspan>
+                </text>
+            </g>
+        </g>
+        <path d="M183,94.5 L453,94.5" id="Line" stroke="#7B9EA1" stroke-width="4" stroke-linecap="square" mask="url(#mask-3)"></path>
+        <text id="Ellen-Goulding" mask="url(#mask-3)" font-family="TiemposHeadline-Bold, Tiempos Headline" font-size="36" font-weight="bold" letter-spacing="-0.0375000015" fill="#3B4149">
+            <tspan x="187" y="86">Ellen Goulding</tspan>
+        </text>
+    </g>
+</svg>
