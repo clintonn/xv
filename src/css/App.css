@@ -46,6 +46,21 @@ a:hover {
 .center {
   text-align: center; }
 
+.logo {
+  font-family: "Tiempos Headline", Georgia, serif;
+  color: white; }
+
+.darkbckgr {
+  background-color: #292929; }
+
+.full_height {
+  min-height: 100vh; }
+
+.flex_wrap_center {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; }
+
 .splashpage {
   border: 0.75em solid #292929; }
 
@@ -54,9 +69,13 @@ a:hover {
   height: 55vh;
   background-color: #292929; }
 
-.logo {
-  font-family: "Tiempos Headline", Georgia, serif;
-  color: white; }
+@media screen and (min-width: 340px) {
+  .header {
+    height: 42vh; } }
+
+@media screen and (min-width: 375px) {
+  .header {
+    height: 36vh; } }
 
 .header__logo {
   display: inline-block;
@@ -71,10 +90,10 @@ a:hover {
 .header__links {
   display: inline-block;
   float: right;
-  padding: 3em 0; }
+  padding: 2.7em 0; }
 
 .header__links * {
-  margin: 0 2em; }
+  margin: 0 3vw; }
 
 .header__resume img {
   display: block;
@@ -97,6 +116,10 @@ a:hover {
 .resume {
   max-width: 80%; }
 
+@media screen and (max-width: 375px) {
+  .resume {
+    max-width: 100%; } }
+
 .icon::before {
   font-size: 10em;
   -webkit-text-fill-color: transparent;
@@ -108,3 +131,58 @@ a:hover {
   background-color: #292929;
   color: white;
   height: 35vh; }
+
+.footer__logo {
+  padding: 3em; }
+
+.register {
+  display: flex;
+  flex-wrap: wrap;
+  height: 70vh;
+  justify-content: center; }
+
+.register_form {
+  font-size: .9em;
+  color: white;
+  display: inline-block;
+  text-align: left; }
+
+.register_form__input {
+  width: 16em;
+  font-size: 1em;
+  margin-bottom: 1em;
+  margin-top: .2em;
+  background: transparent;
+  padding: 0.7em 1em;
+  border: 1px solid white;
+  color: white; }
+
+.register_form__input:focus {
+  outline: none;
+  box-shadow: 0 0 5px #f1f1f1;
+  transition: 0.2s all; }
+
+.logoform {
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 30vh;
+  width: 100%; }
+
+.register_form__button {
+  background: transparent;
+  color: #f1f1f1;
+  border: 1px solid #f1f1f1;
+  padding: 1em;
+  width: 100%;
+  border-radius: 3px;
+  text-transform: uppercase;
+  transition: 0.2s all; }
+
+.register_form__button:hover {
+  transition: 0.2s all;
+  background-color: #f1f1f1;
+  color: #292929;
+  cursor: pointer; }
+
+.register_form * {
+  display: block; }

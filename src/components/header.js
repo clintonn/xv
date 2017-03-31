@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
-import resume from '../test.svg'
+import resume from '../resume.svg'
 const Header = () => {
   return (
     <header className="header">
@@ -12,7 +12,7 @@ const Header = () => {
           <Link to="/register">Register</Link>
         </div>
       </div>
-      <div className="header__resume"><img src={resume} className="resume" /></div>
+      <div className="header__resume"><img src={resume} className="resume" alt="Example resume for xv" /></div>
     </header>
   )
 }

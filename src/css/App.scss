@@ -1,27 +1,9 @@
 @import './typography/stylesheet';
 @import 'vars.scss';
+@import 'base.scss';
+@import 'rules.scss';
 
-body {
-  margin: 0;
-  padding: 0;
-  font-family: $body-text;
-  color: $dark-grey;
-  -webkit-font-smoothing: antialiased;
-}
-
-a {
-  text-decoration: none;
-  color: $light-grey;
-  transition: $default-transition;
-}
-
-a:hover {
-  color: $accent-dark;
-}
-
-.center {
-  text-align: center;
-}
+// locals
 
 .splashpage {
   border: .75em solid $dark-grey;
@@ -31,11 +13,12 @@ a:hover {
   position: relative;
   height: 55vh;
   background-color: $dark-grey;
-}
-
-.logo {
-  font-family: $heading;
-  color: white;
+  @media screen and (min-width: $xs-break) {
+    height: 42vh;
+  }
+  @media screen and (min-width: $s-break) {
+    height: 36vh;
+  }
 }
 
 .header__logo {
@@ -53,11 +36,11 @@ a:hover {
 .header__links {
   display: inline-block;
   float: right;
-  padding: 3em 0;
+  padding: 2.7em 0;
 }
 
 .header__links * {
-  margin: 0 2em;
+  margin: 0 3vw;
 }
 
 .header__resume img {
@@ -84,6 +67,9 @@ a:hover {
 
 .resume {
   max-width: 80%;
+  @media screen and (max-width: $s-break) {
+    max-width: 100%;
+  }
 }
 
 .icon::before {
@@ -98,4 +84,68 @@ a:hover {
   background-color: $dark-grey;
   color: white;
   height: 35vh;
+}
+
+.footer__logo {
+  padding: 3em;
+}
+
+.register {
+  display: flex;
+  flex-wrap: wrap;
+  height: 70vh;
+  justify-content: center;
+}
+
+.register_form {
+  font-size: .9em;
+  color: white;
+  display: inline-block;
+  text-align: left;
+}
+
+.register_form__input {
+  width: 16em;
+  font-size: 1em;
+  margin-bottom: 1em;
+  margin-top: .2em;
+  background: transparent;
+  padding: 0.7em 1em;
+  border: 1px solid white;
+  color: white;
+}
+
+.register_form__input:focus {
+  outline: none;
+  box-shadow: 0 0 5px $light-grey;
+  transition: $default-transition;
+}
+
+.logoform {
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 30vh;
+  width: 100%;
+}
+
+.register_form__button {
+  background: transparent;
+  color: $light-grey;
+  border: 1px solid $light-grey;
+  padding: 1em;
+  width: 100%;
+  border-radius: 3px;
+  text-transform: uppercase;
+  transition: $default-transition;
+}
+
+.register_form__button:hover {
+  transition: $default-transition;
+  background-color: $light-grey;
+  color: $dark-grey;
+  cursor: pointer;
+}
+
+.register_form * {
+  display: block;
 }

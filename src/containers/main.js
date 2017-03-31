@@ -16,7 +16,7 @@ export default class Main extends Component {
         </div>
         <div className="brochure__item">
         <h3 className="brochure__header">
-          Duplicate your resume and tailor it for any job.
+          Duplicate it and tailor copies for any job.
         </h3>
         <i className="icon ion-ios-albums-outline"></i>
       </div>

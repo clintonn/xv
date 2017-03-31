@@ -1,0 +1,19 @@
+// base styles
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: $body-text;
+  color: $dark-grey;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  text-decoration: none;
+  color: $light-grey;
+  transition: $default-transition;
+}
+
+a:hover {
+  color: $accent-dark;
+}
