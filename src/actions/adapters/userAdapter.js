@@ -1,4 +1,7 @@
 import axios from './config'
+import { browserHistory } from 'react-router-dom'
+// import createBrowserHistory from 'history/createBrowserHistory'
+// const history = createBrowserHistory();
 
 export default {
   createUser: (params) => {
@@ -10,6 +13,9 @@ export default {
       password: params.password,
       password_confirmation: params.passwordConfirmation
     }}
-    axios.post('/users', paramsHash).then(resp => {debugger})
+    axios.post('/users', paramsHash).then(resp => {
+      axios.auth = { jwt: resp.data.jwt }
+      browserHistory.push('/dashboard')
+    })
   }
 }
