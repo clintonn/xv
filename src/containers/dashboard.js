@@ -1,9 +1,8 @@
 import React from 'react'
-import { withRouter } from 'react-router-dom'
-export default withRouter(() => {
+export default () => {
   return (
     <div className="dashboard">
       Welcome!
     </div>
   )
-})
+}

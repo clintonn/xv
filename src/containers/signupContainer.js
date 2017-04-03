@@ -1,7 +1,7 @@
 import React from 'react'
 import Register from '../components/register'
 import logo from '../logo_white.svg'
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router'
 export default () => {
   return (
     <div className="center full_height darkbckgr">

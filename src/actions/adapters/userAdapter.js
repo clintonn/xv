@@ -1,7 +1,5 @@
 import axios from './config'
-import { browserHistory } from 'react-router-dom'
-// import createBrowserHistory from 'history/createBrowserHistory'
-// const history = createBrowserHistory();
+import { browserHistory } from 'react-router'
 
 export default {
   createUser: (params) => {
