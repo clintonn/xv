@@ -1,0 +1,17 @@
+.center {
+  text-align: center; }
+
+.logo {
+  font-family: "Tiempos Headline", Georgia, serif;
+  color: white; }
+
+.darkbckgr {
+  background-color: #292929; }
+
+.full_height {
+  min-height: 100vh; }
+
+.flex_wrap_center {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; }

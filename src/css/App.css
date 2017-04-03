@@ -68,14 +68,15 @@ a:hover {
   position: relative;
   height: 55vh;
   background-color: #292929; }
-
-@media screen and (min-width: 340px) {
-  .header {
-    height: 42vh; } }
-
-@media screen and (min-width: 375px) {
-  .header {
-    height: 36vh; } }
+  @media screen and (min-width: 320px) {
+    .header {
+      height: 42vh; } }
+  @media screen and (min-width: 375px) {
+    .header {
+      height: 36vh; } }
+  @media screen and (min-width: 1024px) {
+    .header {
+      height: 50vh; } }
 
 .header__logo {
   display: inline-block;
@@ -90,7 +91,7 @@ a:hover {
 .header__links {
   display: inline-block;
   float: right;
-  padding: 2.7em 0; }
+  padding: 2.8em 0; }
 
 .header__links * {
   margin: 0 3vw; }
@@ -107,6 +108,10 @@ a:hover {
 .brochure__item {
   flex: 0 0 40%;
   margin: 3em 0; }
+  @media screen and (min-width: 320px) {
+    .brochure__item {
+      flex: 0 0 85%;
+      font-size: 75%; } }
 
 .brochure__header {
   font-size: 2em;
@@ -115,10 +120,9 @@ a:hover {
 
 .resume {
   max-width: 80%; }
-
-@media screen and (max-width: 375px) {
-  .resume {
-    max-width: 100%; } }
+  @media screen and (max-width: 375px) {
+    .resume {
+      max-width: 100%; } }
 
 .icon::before {
   font-size: 10em;
@@ -133,7 +137,7 @@ a:hover {
   height: 35vh; }
 
 .footer__logo {
-  padding: 3em; }
+  padding: 2.5em; }
 
 .register {
   display: flex;
@@ -157,6 +161,9 @@ a:hover {
   border: 1px solid white;
   color: white; }
 
+.register_form__input--invalid {
+  box-shadow: 0 0 5px #ff3636; }
+
 .register_form__input:focus {
   outline: none;
   box-shadow: 0 0 5px #f1f1f1;
@@ -165,7 +172,7 @@ a:hover {
 .logoform {
   background-position: center center;
   background-repeat: no-repeat;
-  height: 30vh;
+  height: 20vh;
   width: 100%; }
 
 .register_form__button {
@@ -183,6 +190,13 @@ a:hover {
   background-color: #f1f1f1;
   color: #292929;
   cursor: pointer; }
+
+.register_form__reminder {
+  font-size: 85%;
+  color: #7b7b7b;
+  margin-top: -0.6em;
+  margin-bottom: 1em;
+  min-height: .1em; }
 
 .register_form * {
   display: block; }

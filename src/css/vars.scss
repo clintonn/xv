@@ -5,14 +5,15 @@ $light-grey: #f1f1f1;
 $accent-light: #749295;
 $accent-dark: rgb(125, 164, 169);
 $dark-grey: #292929;
+$dark-red: #ff3636;
 
 $default-transition: .2s all;
 
 
 // Responsive breakpoints
 
-$xs-break: 340px;
+$xs-break: 320px;
 $s-break: 375px;
-$m-break: 32em;
-$l-break: 53em;
-$xl-break: 60em;
+$m-break: 768px;
+$l-break: 1024px;
+$xl-break: 1280px;

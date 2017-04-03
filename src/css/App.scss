@@ -19,6 +19,9 @@
   @media screen and (min-width: $s-break) {
     height: 36vh;
   }
+  @media screen and (min-width: $l-break) {
+    height: 50vh;
+  }
 }
 
 .header__logo {
@@ -36,7 +39,7 @@
 .header__links {
   display: inline-block;
   float: right;
-  padding: 2.7em 0;
+  padding: 2.8em 0;
 }
 
 .header__links * {
@@ -57,6 +60,11 @@
 .brochure__item {
   flex: 0 0 40%;
   margin: 3em 0;
+
+  @media screen and (min-width: $xs-break) {
+    flex: 0 0 85%;
+    font-size: 75%;
+  }
 }
 
 .brochure__header {
@@ -87,7 +95,7 @@
 }
 
 .footer__logo {
-  padding: 3em;
+  padding: 2.5em;
 }
 
 .register {
@@ -115,6 +123,10 @@
   color: white;
 }
 
+.register_form__input--invalid {
+  box-shadow: 0 0 5px $dark-red;
+}
+
 .register_form__input:focus {
   outline: none;
   box-shadow: 0 0 5px $light-grey;
@@ -124,7 +136,7 @@
 .logoform {
   background-position: center center;
   background-repeat: no-repeat;
-  height: 30vh;
+  height: 20vh;
   width: 100%;
 }
 
@@ -144,6 +156,14 @@
   background-color: $light-grey;
   color: $dark-grey;
   cursor: pointer;
+}
+
+.register_form__reminder {
+  font-size: 85%;
+  color: #7b7b7b;
+  margin-top: -0.6em;
+  margin-bottom: 1em;
+  min-height: .1em;
 }
 
 .register_form * {
