@@ -61,6 +61,20 @@ a:hover {
   flex-wrap: wrap;
   justify-content: center; }
 
+.register_transition-enter {
+  opacity: 0; }
+
+.register_transition-enter.register_transition-enter-active {
+  opacity: 1;
+  transition: 3s all; }
+
+.register_transition-leave {
+  opacity: 1; }
+
+.register_transition-leave.register_transition-leave-active {
+  opacity: 0;
+  transition: 3s all; }
+
 .splashpage {
   border: 0.75em solid #292929; }
 
@@ -68,15 +82,18 @@ a:hover {
   position: relative;
   height: 55vh;
   background-color: #292929; }
-  @media screen and (min-width: 320px) {
-    .header {
-      height: 42vh; } }
-  @media screen and (min-width: 375px) {
-    .header {
-      height: 36vh; } }
-  @media screen and (min-width: 1024px) {
-    .header {
-      height: 50vh; } }
+
+@media screen and (min-width: 320px) {
+  .header {
+    height: 42.5vh; } }
+
+@media screen and (min-width: 375px) {
+  .header {
+    height: 36vh; } }
+
+@media screen and (min-width: 1024px) {
+  .header {
+    height: 50vh; } }
 
 .header__logo {
   display: inline-block;
@@ -108,10 +125,11 @@ a:hover {
 .brochure__item {
   flex: 0 0 40%;
   margin: 3em 0; }
-  @media screen and (min-width: 320px) {
-    .brochure__item {
-      flex: 0 0 85%;
-      font-size: 75%; } }
+
+@media screen and (min-width: 320px) {
+  .brochure__item {
+    flex: 0 0 85%;
+    font-size: 75%; } }
 
 .brochure__header {
   font-size: 2em;
@@ -120,9 +138,10 @@ a:hover {
 
 .resume {
   max-width: 80%; }
-  @media screen and (max-width: 375px) {
-    .resume {
-      max-width: 100%; } }
+
+@media screen and (max-width: 375px) {
+  .resume {
+    max-width: 100%; } }
 
 .icon::before {
   font-size: 10em;
@@ -142,8 +161,8 @@ a:hover {
 .register {
   display: flex;
   flex-wrap: wrap;
-  height: 70vh;
-  justify-content: center; }
+  justify-content: center;
+  padding-bottom: 10vh; }
 
 .register_form {
   font-size: .9em;
@@ -200,3 +219,17 @@ a:hover {
 
 .register_form * {
   display: block; }
+
+.example-enter {
+  opacity: 0.01; }
+
+.example-enter.example-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in; }
+
+.example-leave {
+  opacity: 1; }
+
+.example-leave.example-leave-active {
+  opacity: 0.01;
+  transition: opacity 300ms ease-in; }

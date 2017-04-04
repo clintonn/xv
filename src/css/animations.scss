@@ -1,0 +1,15 @@
+
+.register_transition-enter {
+  opacity: 0;
+}
+.register_transition-enter.register_transition-enter-active {
+  opacity: 1;
+  transition: 3s all;
+}
+.register_transition-leave {
+  opacity: 1;
+}
+.register_transition-leave.register_transition-leave-active {
+  opacity: 0;
+  transition: 3s all;
+}

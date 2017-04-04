@@ -1,8 +1,9 @@
 import React from 'react'
+import ResumeIndex from './resumeIndex'
 export default () => {
   return (
     <div className="dashboard">
-      Welcome!
+      <ResumeIndex />
     </div>
   )
 }

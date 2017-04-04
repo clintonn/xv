@@ -2,6 +2,7 @@
 @import 'vars.scss';
 @import 'base.scss';
 @import 'rules.scss';
+@import 'animations.scss';
 
 // locals
 
@@ -14,7 +15,7 @@
   height: 55vh;
   background-color: $dark-grey;
   @media screen and (min-width: $xs-break) {
-    height: 42vh;
+    height: 42.5vh;
   }
   @media screen and (min-width: $s-break) {
     height: 36vh;
@@ -101,8 +102,8 @@
 .register {
   display: flex;
   flex-wrap: wrap;
-  height: 70vh;
   justify-content: center;
+  padding-bottom: 10vh;
 }
 
 .register_form {
@@ -168,4 +169,22 @@
 
 .register_form * {
   display: block;
+}
+
+.example-enter {
+  opacity: 0.01;
+}
+
+.example-enter.example-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+
+.example-leave {
+  opacity: 1;
+}
+
+.example-leave.example-leave-active {
+  opacity: 0.01;
+  transition: opacity 300ms ease-in;
 }
