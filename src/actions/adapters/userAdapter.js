@@ -26,8 +26,11 @@ export default {
       password: params.password,
     }
     return axios.post('/login', creds).then(resp => {
+      // TODO: add error handling for non-200 responses
       axios.auth = { jwt: resp.data.jwt }
       document.cookie = `jwt=${resp.data.jwt}; max-age=31536000; path=/;`
+      browserHistory.push('/')
+      debugger
       return resp.data.user
     })
   },
@@ -35,7 +38,7 @@ export default {
     let c = decodeCookie(document.cookie)
     return axios.post('/logout', {jwt: c}).then(resp => {
       browserHistory.push("/")
-      // TODO: code for 500 error handling
+      // TODO: add error handling for non-200 responses
       return (resp.status === 202 ? (
         document.cookie = "jwt=; expires=Thu, 01 Jan 1970 00:00:00 GMT",
         axios.auth = undefined

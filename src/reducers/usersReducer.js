@@ -9,6 +9,8 @@ export default (users = initialState, action) => {
       return { ...users, currentUser: action.payload }
     case "LOGOUT_USER":
       return initialState
+    case "LOGIN_USER":
+      return { ...users, currentUser: action.payload }
     default:
       return { ...users }
   }

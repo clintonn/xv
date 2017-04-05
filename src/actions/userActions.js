@@ -10,6 +10,7 @@ export const createUser = params => {
 
 export const loginUser = params => {
   let userObj = userAdapter.loginUser(params)
+  debugger
   return {
     type: "LOGIN_USER",
     payload: userObj
