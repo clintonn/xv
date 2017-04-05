@@ -8,8 +8,12 @@ const Nav = props => {
   return (
     <div className="nav">
       <div className="nav__links">
+        The current user is {props.currentUser.firstName}
         <Link to="/">Profile</Link>
-        <Link to="/logout" onClick={props.logoutUser}>Logout</Link>
+        <Link to="/logout" onClick={(e) => {
+          e.preventDefault()
+          props.logoutUser()
+        }}>Logout</Link>
       </div>
     </div>
   )
@@ -23,4 +27,4 @@ const mapStateToProps = store => {
 
 const mapDispatchToProps = dispatch => bindActionCreators({ logoutUser }, dispatch)
 
-export default connect()
+export default connect(mapStateToProps, mapDispatchToProps)(Nav)

@@ -25,10 +25,19 @@
   }
 }
 
+.header__nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .header__logo {
   display: inline-block;
   margin: 0;
-  padding: 1em;
+  padding: 0 3em;
+  @media screen and (max-width: $s-break) {
+    padding: 0 1em;
+  }
 }
 
 .header__resume {
@@ -40,7 +49,10 @@
 .header__links {
   display: inline-block;
   float: right;
-  padding: 2.8em 0;
+  padding: 2.8em 1em;
+  @media screen and (max-width: $s-break) {
+    padding: 2.8em 0;
+  }
 }
 
 .header__links * {
@@ -92,11 +104,11 @@
 .footer {
   background-color: $dark-grey;
   color: white;
-  height: 35vh;
+  height: 100%;
 }
 
-.footer__logo {
-  padding: 2.5em;
+.footer__text {
+  padding: 5em 0;
 }
 
 .register {

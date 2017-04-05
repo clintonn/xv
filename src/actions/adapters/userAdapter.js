@@ -1,6 +1,6 @@
 import axios from './config'
 import { browserHistory } from 'react-router'
-
+import { decodeCookie } from './cookieAdapter'
 
 
 export default {
@@ -15,7 +15,8 @@ export default {
     }}
     return axios.post('/users', paramsHash).then(resp => {
       axios.auth = { jwt: resp.data.jwt }
-      browserHistory.push('/dashboard')
+      document.cookie = `jwt=${resp.data.jwt}; max-age=31536000; path=/;`
+      browserHistory.push('/')
       return resp.data.user
     })
   },
@@ -26,8 +27,19 @@ export default {
     }
     return axios.post('/login', creds).then(resp => {
       axios.auth = { jwt: resp.data.jwt }
-      browserHistory.push('/dashboard')
+      document.cookie = `jwt=${resp.data.jwt}; max-age=31536000; path=/;`
       return resp.data.user
+    })
+  },
+  logoutUser: () => {
+    let c = decodeCookie(document.cookie)
+    return axios.post('/logout', {jwt: c}).then(resp => {
+      browserHistory.push("/")
+      // TODO: code for 500 error handling
+      return (resp.status === 202 ? (
+        document.cookie = "jwt=; expires=Thu, 01 Jan 1970 00:00:00 GMT",
+        axios.auth = undefined
+      ) : null)
     })
   }
 }

@@ -2,11 +2,13 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { Link } from 'react-router'
 import resume from '../resume.svg'
-const Header = () => {
+import logo from '../logo_white.svg'
+
+const Header = props => {
   return (
     <header className="header">
       <div className="header__nav">
-        <h1 className="logo header__logo">xv</h1>
+        <Link to="/"><img src={logo} alt="xv logo" className="header__logo" /></Link>
         <div className="header__links">
           <Link to="/login">Login</Link>
           <Link to="/register">Register</Link>

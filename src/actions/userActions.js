@@ -16,9 +16,10 @@ export const loginUser = params => {
   }
 }
 
-export const logoutUser = () => {
+export const logoutUser = params => {
+  let resp = userAdapter.logoutUser(params)
   return {
     type: "LOGOUT_USER",
-    payload: undefined
+    payload: resp
   }
 }
