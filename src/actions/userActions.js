@@ -10,15 +10,17 @@ export const createUser = params => {
 
 export const loginUser = params => {
   let userObj = userAdapter.loginUser(params)
+  debugger
   return {
     type: "LOGIN_USER",
     payload: userObj
   }
 }
 
-export const logoutUser = () => {
+export const logoutUser = params => {
+  let resp = userAdapter.logoutUser(params)
   return {
     type: "LOGOUT_USER",
-    payload: undefined
+    payload: resp
   }
 }

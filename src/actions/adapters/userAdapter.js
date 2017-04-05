@@ -1,6 +1,6 @@
 import axios from './config'
 import { browserHistory } from 'react-router'
-
+import { decodeCookie } from './cookieAdapter'
 
 
 export default {
@@ -15,7 +15,8 @@ export default {
     }}
     return axios.post('/users', paramsHash).then(resp => {
       axios.auth = { jwt: resp.data.jwt }
-      browserHistory.push('/dashboard')
+      document.cookie = `jwt=${resp.data.jwt}; max-age=31536000; path=/;`
+      browserHistory.push('/')
       return resp.data.user
     })
   },
@@ -25,9 +26,23 @@ export default {
       password: params.password,
     }
     return axios.post('/login', creds).then(resp => {
+      // TODO: add error handling for non-200 responses
       axios.auth = { jwt: resp.data.jwt }
-      browserHistory.push('/dashboard')
+      document.cookie = `jwt=${resp.data.jwt}; max-age=31536000; path=/;`
+      browserHistory.push('/')
+      debugger
       return resp.data.user
+    })
+  },
+  logoutUser: () => {
+    let c = decodeCookie(document.cookie)
+    return axios.post('/logout', {jwt: c}).then(resp => {
+      browserHistory.push("/")
+      // TODO: add error handling for non-200 responses
+      return (resp.status === 202 ? (
+        document.cookie = "jwt=; expires=Thu, 01 Jan 1970 00:00:00 GMT",
+        axios.auth = undefined
+      ) : null)
     })
   }
 }
