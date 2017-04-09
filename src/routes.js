@@ -4,6 +4,7 @@ import Main from './containers/main'
 import LoginContainer from './containers/loginContainer'
 import SignupContainer from './containers/signupContainer'
 import Dashboard from './containers/dashboard'
+import UserProfile from './containers/userProfile.js'
 
 export default (
     <Router history={browserHistory}>
@@ -12,6 +13,7 @@ export default (
         <Route path="/login" component={LoginContainer} />
         <Route path="/register" component={SignupContainer} />
         <Route path="/dashboard" component={Dashboard} />
+        <Route path="/u/:id" component={UserProfile} />
       </div>
     </Router>
 )

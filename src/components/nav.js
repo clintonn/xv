@@ -7,13 +7,13 @@ import { logoutUser } from '../actions/userActions'
 const Nav = props => {
   return (
     <div className="nav">
-      <div className="nav__links">
-        The current user is {props.currentUser.firstName}
-        <Link to="/">Profile</Link>
-        <Link to="/logout" onClick={(e) => {
+      <link rel="stylesheet" type="text/css" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" />
+      <div className="nav__icons">
+        <Link to="/resumes/new"><i className="icon ion-android-add-circle" /></Link>
+        <Link to="/" onClick={e => {
           e.preventDefault()
           props.logoutUser()
-        }}>Logout</Link>
+        }}><i className="icon ion-log-out" /></Link>
       </div>
     </div>
   )

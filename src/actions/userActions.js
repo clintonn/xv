@@ -24,3 +24,11 @@ export const logoutUser = params => {
     payload: resp
   }
 }
+
+export const getCurrentUser = cookieJWT => {
+  let resp = userAdapter.getCurrentUser(cookieJWT)
+  return {
+    type: "GET_CURRENT_USER",
+    payload: resp
+  }
+}

@@ -34,6 +34,7 @@ export default {
       return resp.data.user
     })
   },
+
   logoutUser: () => {
     let c = decodeCookie(document.cookie)
     return axios.post('/logout', {jwt: c}).then(resp => {
@@ -44,5 +45,12 @@ export default {
         axios.auth = undefined
       ) : null)
     })
+  },
+  getCurrentUser: () => {
+    let c = decodeCookie(document.cookie)
+    return axios.post('/auth', {jwt: c}).then(resp => {
+      return resp.status == 200 ? resp.data : {}
+    })
+    // post jwt to server, get back either a 200 response with user, or a 401 that pushes
   }
 }
