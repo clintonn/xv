@@ -1,8 +1,8 @@
 import React, {Component} from 'react'
 import Header from '../components/header'
 import Footer from '../components/footer'
-import { connect } from 'react-redux'
 import Dashboard from './dashboard'
+import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { getCurrentUser } from '../actions/userActions'
 
@@ -14,8 +14,8 @@ class Main extends Component {
     }
   }
 
+
   render() {
-    debugger
     return Object.keys(this.props.currentUser).length > 1 ? <Dashboard /> : (
     <div className="splashpage">
       <Header />

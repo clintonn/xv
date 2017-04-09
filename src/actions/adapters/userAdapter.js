@@ -6,14 +6,15 @@ import { decodeCookie } from './cookieAdapter'
 export default {
   createUser: params => {
     let paramsHash = { user: {
-      first_name: params.firstName,
-      last_name: params.lastName,
-      username: params.username,
+      firstName: params.firstName,
+      lastName: params.lastName,
+      userName: params.username,
       email: params.email,
       password: params.password,
-      password_confirmation: params.passwordConfirmation
+      passwordConfirmation: params.passwordConfirmation
     }}
     return axios.post('/users', paramsHash).then(resp => {
+      debugger
       axios.auth = { jwt: resp.data.jwt }
       document.cookie = `jwt=${resp.data.jwt}; max-age=31536000; path=/;`
       browserHistory.push('/')
@@ -30,7 +31,6 @@ export default {
       axios.auth = { jwt: resp.data.jwt }
       document.cookie = `jwt=${resp.data.jwt}; max-age=31536000; path=/;`
       browserHistory.push('/')
-      debugger
       return resp.data.user
     })
   },
@@ -49,7 +49,8 @@ export default {
   getCurrentUser: () => {
     let c = decodeCookie(document.cookie)
     return axios.post('/auth', {jwt: c}).then(resp => {
-      return resp.status == 200 ? resp.data : {}
+      debugger
+      return resp.status === 200 ? resp.data : {}
     })
     // post jwt to server, get back either a 200 response with user, or a 401 that pushes
   }

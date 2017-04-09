@@ -82,18 +82,15 @@ a:hover {
   position: relative;
   height: 55vh;
   background-color: #292929; }
-
-@media screen and (min-width: 320px) {
-  .header {
-    height: 42.5vh; } }
-
-@media screen and (min-width: 375px) {
-  .header {
-    height: 36vh; } }
-
-@media screen and (min-width: 1024px) {
-  .header {
-    height: 50vh; } }
+  @media screen and (min-width: 320px) {
+    .header {
+      height: 42.5vh; } }
+  @media screen and (min-width: 375px) {
+    .header {
+      height: 36vh; } }
+  @media screen and (min-width: 1024px) {
+    .header {
+      height: 50vh; } }
 
 .header__nav {
   display: flex;
@@ -104,10 +101,9 @@ a:hover {
   display: inline-block;
   margin: 0;
   padding: 0 3em; }
-
-@media screen and (max-width: 375px) {
-  .header__logo {
-    padding: 0 1em; } }
+  @media screen and (max-width: 375px) {
+    .header__logo {
+      padding: 0 1em; } }
 
 .header__resume {
   position: absolute;
@@ -118,10 +114,9 @@ a:hover {
   display: inline-block;
   float: right;
   padding: 2.8em 1em; }
-
-@media screen and (max-width: 375px) {
-  .header__links {
-    padding: 2.8em 0; } }
+  @media screen and (max-width: 375px) {
+    .header__links {
+      padding: 2.8em 0; } }
 
 .header__links * {
   margin: 0 3vw; }
@@ -138,11 +133,10 @@ a:hover {
 .brochure__item {
   flex: 0 0 40%;
   margin: 3em 0; }
-
-@media screen and (min-width: 320px) {
-  .brochure__item {
-    flex: 0 0 85%;
-    font-size: 75%; } }
+  @media screen and (min-width: 320px) {
+    .brochure__item {
+      flex: 0 0 85%;
+      font-size: 75%; } }
 
 .brochure__header {
   font-size: 2em;
@@ -151,10 +145,9 @@ a:hover {
 
 .resume {
   max-width: 80%; }
-
-@media screen and (max-width: 375px) {
-  .resume {
-    max-width: 100%; } }
+  @media screen and (max-width: 375px) {
+    .resume {
+      max-width: 100%; } }
 
 .brochure__icon::before {
   font-size: 10em;
