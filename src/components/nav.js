@@ -3,13 +3,17 @@ import { Link } from 'react-router'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import { logoutUser } from '../actions/userActions'
+import { createResume } from '../actions/resumeActions'
 
 const Nav = props => {
   return (
     <div className="nav">
       <link rel="stylesheet" type="text/css" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" />
       <div className="nav__icons">
-        <Link to="/resumes/new" className="nav__resume_add dark_form_button"><i className="icon ion-android-add-circle" /> Add Resume</Link>
+        <Link to="/resumes/new" onClick={e => {
+          e.preventDefault()
+          props.createResume(props.currentUser, document.cookie)
+        }} className="nav__resume_add dark_form_button"><i className="icon ion-android-add-circle" /> Add Resume</Link>
         <Link to="/logout" onClick={e => {
           e.preventDefault()
           props.logoutUser()
@@ -25,6 +29,6 @@ const mapStateToProps = store => {
   }
 }
 
-const mapDispatchToProps = dispatch => bindActionCreators({ logoutUser }, dispatch)
+const mapDispatchToProps = dispatch => bindActionCreators({ createResume, logoutUser }, dispatch)
 
 export default connect(mapStateToProps, mapDispatchToProps)(Nav)
