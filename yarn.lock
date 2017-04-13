@@ -4072,6 +4072,10 @@ pluralize@^1.2.1:
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/pluralize/-/pluralize-1.2.1.tgz#d1a21483fd22bb41e58a12fa3421823140897c45"
 
+popper.js@^1.0.8:
+  version "1.0.8"
+  resolved "https://registry.yarnpkg.com/popper.js/-/popper.js-1.0.8.tgz#05c2cb34fdf78af99eb33337605a1384fbaffa32"
+
 postcss-calc@^5.2.0:
   version "5.3.1"
   resolved "https://registry.yarnpkg.com/postcss-calc/-/postcss-calc-5.3.1.tgz#77bae7ca928ad85716e2fda42f261bf7c1d65b5e"
@@ -5343,6 +5347,12 @@ timers-browserify@^2.0.2:
   resolved "https://registry.yarnpkg.com/timers-browserify/-/timers-browserify-2.0.2.tgz#ab4883cf597dcd50af211349a00fbca56ac86b86"
   dependencies:
     setimmediate "^1.0.4"
+
+tippy.js@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/tippy.js/-/tippy.js-0.3.0.tgz#e7b03a77f9b6d31eb4a0f651f05af8cae089e05b"
+  dependencies:
+    popper.js "^1.0.8"
 
 tmpl@1.0.x:
   version "1.0.4"

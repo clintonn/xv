@@ -2,18 +2,20 @@ import React from 'react'
 import { connect } from 'react-redux'
 
 const ResumeIndex = props => {
-  console.log(props)
   return (
     <div className="resume_index">
-      <h3>Here are all your resumes</h3>
-      <h4>Hello {props.currentUser ? props.currentUser.first_name || "stranger" : "stranger"}</h4>
+      { (props.resumes.length > 1) ? (
+        <h3>Here Are Your Resumes</h3>
+      ) : (
+        <h3 className="center resume_index__header">You have no resumes. Click the button above to add one.</h3>
+      )}
     </div>
   )
 }
 
 const mapStateToProps = store => {
   return {
-    currentUser: store.users.currentUser
+    resumes: store.users.currentUser.resumes
   }
 }
 

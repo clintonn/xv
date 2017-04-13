@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import Header from '../components/header'
 import Footer from '../components/footer'
 import Dashboard from './dashboard'
+import Loading from './loading'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { getCurrentUser } from '../actions/userActions'
@@ -16,7 +17,7 @@ class Main extends Component {
 
 
   render() {
-    return Object.keys(this.props.currentUser).length > 1 ? <Dashboard /> : (
+    return Object.keys(this.props.currentUser).length > 1 ? <Dashboard /> : (document.cookie ? <Loading /> : 
     <div className="splashpage">
       <Header />
       <div className="brochure center">

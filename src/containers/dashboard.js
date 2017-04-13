@@ -1,5 +1,5 @@
 import React from 'react'
-import ResumeIndex from './resumeIndex'
+import ResumeIndex from '../components/resumeIndex'
 import Nav from '../components/nav'
 
 export default () => {
@@ -7,7 +7,6 @@ export default () => {
     <div className="dashboard">
       <Nav />
       <ResumeIndex />
-      <button className="dashboard__create">Create a new resume</button>
     </div>
   )
 }

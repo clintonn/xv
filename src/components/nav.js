@@ -9,11 +9,11 @@ const Nav = props => {
     <div className="nav">
       <link rel="stylesheet" type="text/css" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" />
       <div className="nav__icons">
-        <Link to="/resumes/new"><i className="icon ion-android-add-circle" /></Link>
-        <Link to="/" onClick={e => {
+        <Link to="/resumes/new" className="nav__resume_add dark_form_button"><i className="icon ion-android-add-circle" /> Add Resume</Link>
+        <Link to="/logout" onClick={e => {
           e.preventDefault()
           props.logoutUser()
-        }}><i className="icon ion-log-out" /></Link>
+        }} className="nav__logout"><i className="icon ion-log-out" /></Link>
       </div>
     </div>
   )

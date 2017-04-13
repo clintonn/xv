@@ -69,7 +69,7 @@ class Register extends Component {
 
             <label>Password Confirmation: <input type="password" className="register_form__input" data-val="passwordConfirmation" value={this.state.user.passwordConfirmation} /></label>
 
-          <button className="register_form__button">Register</button>
+          <button className="dark_form_button">Register</button>
         </form>
       </div>
     )
