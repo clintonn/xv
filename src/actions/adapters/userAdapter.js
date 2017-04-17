@@ -8,7 +8,7 @@ export default {
     let paramsHash = { user: {
       firstName: params.firstName,
       lastName: params.lastName,
-      userName: params.username,
+      username: params.username,
       email: params.email,
       password: params.password,
       passwordConfirmation: params.passwordConfirmation
@@ -42,11 +42,12 @@ export default {
     document.cookie = "jwt=; expires=Thu, 01 Jan 1970 00:00:00 GMT"
     axios.auth = { jwt: undefined }
   },
+
   getCurrentUser: () => {
     let c = decodeCookie(document.cookie)
     return axios.post('/auth', {jwt: c}).then(resp => {
       return resp.status === 200 ? resp.data : {}
     })
     // post jwt to server, get back either a 200 response with user, or a 401 that pushes
-  }
+  },
 }
